@@ -1,3 +1,8 @@
+module "custom_s3" {
+  source = "./modules/s3"
+  
+}
+
 module "custom_vpc" {
   source = "./modules/vpc"
 
