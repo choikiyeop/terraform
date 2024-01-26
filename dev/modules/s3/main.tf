@@ -1,9 +1,9 @@
-resource "aws_s3_bucket" "tfstate-bucket" {
-  bucket = "terraform-s3-bucket"
+resource "aws_s3_bucket" "cky-tfstate" {
+  bucket = "cky-tfstate-bucket"
 }
 
-resource "aws_s3_bucket_versioning" "tfstate-versioning" {
-  bucket = aws_s3_bucket.tfstate-bucket.id
+resource "aws_s3_bucket_versioning" "cky-tfstate-versioning" {
+  bucket = aws_s3_bucket.cky-tfstate.id
   versioning_configuration {
     status = "Enabled"
   }
