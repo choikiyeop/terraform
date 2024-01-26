@@ -41,13 +41,23 @@ terraform
    │  ├─ eks
    │  ├─ iam
    │  ├─ rds
+   │  ├─ s3
    │  └─ vpc
+   ├─ data.tf
    ├─ main.tf
-   └─ provider.tf
+   ├─ provider.tf
+   ├─ terraform.tfvars
+   └─ variable.tf
 ```
 
 ## 참고
 
-[aws module 주소](https://registry.terraform.io/namespaces/terraform-aws-modules)
+[aws module 주소](https://registry.terraform.io/namespaces/terraform-aws-modules)  
 
-[aws document 주소](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
+[aws document 주소](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)  
+
+[github terraform-aws-eks 모듈 주소](https://github.com/terraform-aws-modules/terraform-aws-eks)
+
+[깃허브 terraform-helm-provider 주소](https://github.com/hashicorp/terraform-provider-helm)  
+
+[aws-load-balancer-controller](https://kubernetes-sigs.github.io/aws-load-balancer-controller)
