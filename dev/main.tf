@@ -22,6 +22,8 @@ module "custom_eks" {
   private_subnets_ids = module.custom_vpc.private_subnets
   intra_subnets_ids   = module.custom_vpc.intra_subnets
 
+  lb_controller_role_arn = module.custom_iam.lb_controller_irsa_role
+
   tags = var.tags
 }
 

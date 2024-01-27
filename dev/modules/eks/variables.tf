@@ -18,3 +18,7 @@ variable "intra_subnets_ids" {
 variable "tags" {
   description = "클러스터의 태그"
 }
+
+variable "lb_controller_role_arn" {
+  
+}
