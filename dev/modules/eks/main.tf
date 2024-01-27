@@ -22,9 +22,6 @@ module "eks" {
   subnet_ids = var.private_subnets_ids
   control_plane_subnet_ids = var.intra_subnets_ids
 
-  create_aws_auth_configmap = true
-  manage_aws_auth_configmap = true
-  
   eks_managed_node_group_defaults = {
     instance_types = ["t3.small", "t3.medium"]
   }
