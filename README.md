@@ -50,6 +50,12 @@ terraform
    └─ variable.tf
 ```
 
+## 생성된 eks 접속
+```
+aws eks --region ap-northeast-2 update-kubeconfig --name cky-cluster --alias cky-cluster
+kubectl config use-context cky-cluster
+```
+
 ## 참고
 
 [aws module 주소](https://registry.terraform.io/namespaces/terraform-aws-modules)  
