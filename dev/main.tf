@@ -2,6 +2,19 @@
 #   source = "./modules/s3"
 # }
 
+module "custom_route53" {
+  source = "./modules/route53"
+
+  zones = {
+    "example.com" = {
+      comment = "example.com (production)"
+      tags = {
+        env = "production"
+      }
+    }
+  }
+}
+
 module "custom_vpc" {
   source = "./modules/vpc"
 
@@ -31,6 +44,8 @@ module "custom_iam" {
   source = "./modules/iam"
 
   oidc_provider_arn = module.custom_eks.eks_oidc_provider_arn
+
+  hosted_zone_arns = [module.custom_route53.route53_zone_zone_arn["example.com"]]
 
   tags = var.tags
 }

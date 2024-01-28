@@ -19,7 +19,7 @@ module "external_dns_irsa_role" {
 
   role_name                     = "external-dns"
   attach_external_dns_policy    = true
-  external_dns_hosted_zone_arns = ["arn:aws:route53:::hostedzone/IClearlyMadeThisUp"]
+  external_dns_hosted_zone_arns = var.hosted_zone_arns
 
   oidc_providers = {
     main = {
